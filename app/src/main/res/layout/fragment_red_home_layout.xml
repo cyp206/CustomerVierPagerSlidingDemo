@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+<com.snow.yiping.customervierpagerslidingdemo.widget.CoverFlowViewPager
+        android:id="@+id/cover_flow_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@drawable/bg_main_red"-->
+            <!--android:scaleType="fitCenter" />-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="vertical">-->
+
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<RelativeLayout-->
+                    <!--android:id="@+id/rl_speed_boost"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_margin="2dp"-->
+                    <!--android:layout_weight="1">-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/iv_icon_boost"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:src="@drawable/icon_main_fast_boost" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/iv_icon_boost"-->
+                        <!--android:layout_centerHorizontal="true"-->
+                        <!--android:text="@string/setting_title_sub_phone_boost"-->
+                        <!--android:textColor="#E02354"-->
+                        <!--android:textSize="14sp" />-->
+                <!--</RelativeLayout>-->
+
+                <!--&lt;!&ndash;</RelativeLayout>&ndash;&gt;-->
+                <!--<RelativeLayout-->
+                    <!--android:id="@+id/rl_file_clean"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_margin="2dp"-->
+                    <!--android:layout_weight="1">-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/iv_icon_clean"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:src="@drawable/icon_main_clean" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/iv_icon_clean"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:text="@string/supo_junk_cleaner_title"-->
+                        <!--android:textColor="#E02354"-->
+                        <!--android:textSize="14sp" />-->
+                <!--</RelativeLayout>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="1">-->
+
+                <!--<RelativeLayout-->
+                    <!--android:id="@+id/rl_phone_saving"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_margin="2dp"-->
+                    <!--android:layout_weight="1">-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/iv_icon_security"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:src="@drawable/icon_main_power_saving" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/iv_icon_security"-->
+                        <!--android:layout_centerHorizontal="true"-->
+                        <!--android:text="@string/red_fragment_title_phone_saving"-->
+                        <!--android:textColor="#E02354"-->
+                        <!--android:textSize="14sp" />-->
+                <!--</RelativeLayout>-->
+
+                <!--&lt;!&ndash;</RelativeLayout>&ndash;&gt;-->
+                <!--<RelativeLayout-->
+                    <!--android:id="@+id/rl_phone_cooling"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_margin="2dp"-->
+                    <!--android:layout_weight="1">-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/iv_icon_cpu"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:src="@drawable/icon_main_cpu_cool" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/iv_icon_cpu"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:text="@string/setting_title_sub_cpu_cool"-->
+                        <!--android:textColor="#E02354"-->
+                        <!--android:textSize="14sp" />-->
+                <!--</RelativeLayout>-->
+            <!--</LinearLayout>-->
+        <!--</LinearLayout>-->
+
+    <!--</RelativeLayout>-->
+</LinearLayout>
