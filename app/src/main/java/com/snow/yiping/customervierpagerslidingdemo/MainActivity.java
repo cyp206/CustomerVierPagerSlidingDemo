@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    private static final long LOOP_DELAYED_TIME = 5000;
+    private static final long LOOP_DELAYED_TIME = 5000;//延时时间 5秒
     CoverFlowViewPager mCover;
     private Runnable runnable;
     private Handler handler;
@@ -30,15 +30,11 @@ public class MainActivity extends AppCompatActivity {
     private void initView() {
         mCover = (CoverFlowViewPager) findViewById(R.id.cover_flow_view_pager);
         mCover.setViewList(getListView());
-
         handler = new Handler();
         runnable = new Runnable() {
             @Override
             public void run() {
-//                mCover.setViewPagerScroller(true);
                 mCover.mViewPager.setCurrentItem(mCover.mViewPager.getCurrentItem() + 1, true);
-//                mCover.setViewPagerScroller(false);
-
             }
         };
         startNextViewPager();
@@ -55,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     public List<View> getListView() {
-        //        getWindowManager();
         List<View> list = new ArrayList<>();
         InstrumentBoardView cpuInsView = new InstrumentBoardView(this, CircleDisplayView.TYPE_YELLOW_CPU);
         InstrumentBoardView storageInsView = new InstrumentBoardView(this, CircleDisplayView.TYPE_RED_STORAGE);
@@ -63,29 +58,29 @@ public class MainActivity extends AppCompatActivity {
         InstrumentBoardView cpuInsView1 = new InstrumentBoardView(this, CircleDisplayView.TYPE_YELLOW_CPU);
         InstrumentBoardView storageInsView1 = new InstrumentBoardView(this, CircleDisplayView.TYPE_RED_STORAGE);
         InstrumentBoardView ramInsView1 = new InstrumentBoardView(this, CircleDisplayView.TYPE_GREEN_RAM);
-//        cpuInsView1.setViewOnclickListen(new MyBoardViewListen(mCover.mViewPager,CircleDisplayView.TYPE_YELLOW_CPU));
-//        storageInsView1.setViewOnclickListen(new MyBoardViewListen(mCover.mViewPager,CircleDisplayView.TYPE_RED_STORAGE));
-//        ramInsView1.setViewOnclickListen( new MyBoardViewListen(mCover.mViewPager,CircleDisplayView.TYPE_GREEN_RAM));
-//        cpuInsView.setViewOnclickListen(new MyBoardViewListen(mCover.mViewPager, CircleDisplayView.TYPE_YELLOW_CPU));
-//        storageInsView.setViewOnclickListen(new MyBoardViewListen(mCover.mViewPager, CircleDisplayView.TYPE_RED_STORAGE));
-//        ramInsView.setViewOnclickListen(new MyBoardViewListen(mCover.mViewPager, CircleDisplayView.TYPE_GREEN_RAM));
         list.add(cpuInsView);
         list.add(storageInsView);
         list.add(ramInsView);
         list.add(cpuInsView1);
         list.add(storageInsView1);
         list.add(ramInsView1);
-
         return list;
     }
 
-
+    /**
+     * 跳转到下一页，实现轮播效果
+     */
     private void startNextViewPager() {
         if (handler != null || runnable != null) {
             handler.postDelayed(runnable, LOOP_DELAYED_TIME);
         }
     }
 
+    /**
+     * 刷新view里面的数据
+     * @param position
+     * @param isAnim
+     */
     public void refreshViewPager(int position, boolean isAnim) {
         if (mCover.mViewPager == null) return;
         if (position < 0) {

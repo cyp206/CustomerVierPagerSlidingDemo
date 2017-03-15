@@ -354,9 +354,6 @@ public class CircleDisplayView extends View {
 
     private void refreshStorage() {
         long cleanSpace = 0;
-//        if (System.currentTimeMillis() - PrefUtils.getLong(MyApp.getContext(), "LAST_TIME", Long.valueOf(0)) <= BATTERY_INFO_CHECK_INTERVAL) {
-//            cleanSpace = PrefUtils.getLong(MyApp.getContext(), "JUNK_CLEAN_SPACE", 0);
-//        }
         long usedStorageL = (getTotalInternalMemorySize() - getAvailableInternalMemorySize() - cleanSpace);
         usedRAM = CommonUtils.FormetFileSize(usedStorageL);
         totalRAM = CommonUtils.FormetFileSize(getTotalInternalMemorySize());
@@ -365,12 +362,6 @@ public class CircleDisplayView extends View {
     }
 
     private void refreshCPUTem() {
-//        int dropTemp = 0;
-//        if (System.currentTimeMillis() - PrefUtils.getLong(MyApp.getContext(), LAST_TIME_CPU_COOL_FUNCTION, Long.valueOf(0)) <= BATTERY_INFO_CHECK_INTERVAL) {
-//            dropTemp = PrefUtils.getInt(MyApp.getContext(), "CPU_DROPED_Tem", 0);
-//        }
-//        int mCpuTemp = SensorReader.getCpuTemp() - dropTemp;
-//        degrees = (float) mCpuTemp / 100;
     }
 
     private void refreshRAM() {
