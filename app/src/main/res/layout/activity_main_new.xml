@@ -12,6 +12,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <com.snow.yiping.customervierpagerslidingdemo.widget.GradiantText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"
+        android:text="Hello Word"
+        app:startColor="@color/colorAccent"
+        app:endColor="@color/colorPrimary"
+        />
+
     <!--<fragment-->
         <!--android:name="com.snow.yiping.customervierpagerslidingdemo.fragment.HomeRedFragment"-->
         <!--android:layout_width="match_parent"-->
